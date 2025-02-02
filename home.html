@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Aspire Ke</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e1e1e;
+            flex-wrap: wrap;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #22c55e;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero-content {
+            max-width: 90%;
+        }
+        .hero-content h1 {
+            font-size: 2.0rem;
+        }
+        .hero-content p {
+            font-size: 1.0rem;
+            margin: 15px 0;
+        }
+        .cta-buttons button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 10px 5px;
+        }
+        .container {
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh; /* Center vertically */
+        }
+        
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 35px;
+            background: #22c55e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            width: 260px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .google-btn:hover {
+            background: #357ae8;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .google-btn .icon {
+            margin-right: 10px;
+            font-size: 20px;
+            animation: bounce 1.5s infinite;
+        }
+
+        .google-btn .text {
+            font-weight: 600;
+        }
+
+        /* Bounce Animation for Icon */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Button Click Animation */
+        .google-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .cta-primary {
+            background-color: #22c55e;
+            color: #1e1e1e;
+        }
+        .cta-secondary {
+            background-color: #ffffff;
+            color: #1e1e1e;
+        }
+        .cta-secondary a{
+            text-decoration: none;
+        }
+        .cta-primary a{
+            text-decoration: none;
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .feature-card {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature-card img {
+            width: 50px;
+        }
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .info-content h2 {
+            font-size: 2rem;
+        }
+        .info-section img {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        footer a {
+            color: #22c55e;
+            text-decoration: none;
+        }
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .hero-content, .info-content {
+                max-width: 50%;
+            }
+            .hero-image, .info-section img {
+                max-width: 45%;
+            }
+            .info-section {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aspire Ke</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about us.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Simplify Your Education Journey</h1>
+        <p>We provide expert assistance with KUCCPS, HELB, KMTC applications, and course changes at just Ksh. 250 per service.</p>
+        <div class="cta-buttons">
+            <button class="cta-primary"><a href="#google-signin-section">Get Started</a></button>
+            <button class="cta-secondary"><a href="about us.html">Learn More</a></button>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="hero-img.png" alt="Education Assistance">
+    </div>
+</section>
+
+<!-- Add ID to Google Sign-In Section -->
+<div id="google-signin-section" class="container">
+    <button id="google-signin" class="google-btn">
+        <span class="icon">
+            <img src="google icon png.png" alt="Google Icon" width="20px">
+        </span>
+        <span class="text">Sign in with Google</span>
+    </button>
+</div>
+
+
+<section class="features">
+    <div class="feature-card">
+        <img src="kuccps icon.jpg" alt="KUCCPS Icon">
+        <h3>KUCCPS Applications</h3>
+        <p>Get personalized guidance for university placements.</p>
+    </div>
+    <div class="feature-card">
+        <img src="helb icon.png" alt="HELB Icon">
+        <h3>HELB Loan Applications</h3>
+        <p>Secure funding for your education.</p>
+    </div>
+    <div class="feature-card">
+        <img src="kmtc icon.png" alt="KMTC Icon">
+        <h3>KMTC Applications</h3>
+        <p>Join KMTC with ease.</p>
+    </div>
+    <div class="feature-card">
+        <img src="green icon.png" alt="Course Change Icon">
+        <h3>Course Changes</h3>
+        <p>Switch courses hassle-free.</p>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="info-content">
+        <h2>Why Choose Us?</h2>
+        <p>We provide affordable, reliable, and efficient services to help students achieve their goals.</p>
+    </div>
+    <img src="choose us icon.png" alt="Why Choose Us Illustration">
+</section>
+
+<footer>
+    <p>&copy; 2025 Student Application Hub. All rights reserved.</p>
+</footer>
+
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>

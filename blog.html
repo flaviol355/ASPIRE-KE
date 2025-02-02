@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Aspire KE Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: white;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #22c55e;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #1e1e1e;
+                padding: 10px;
+                border-radius: 5px;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: inline-block;
+            }
+        }
+
+        /* Main Section Styles */
+        main {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+
+        .featured-post {
+            flex: 2;
+            margin-right: 20px;
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: auto;
+        }
+
+        .featured-post h2 {
+            margin: 10px 0;
+        }
+
+        .featured-post p {
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .read-more:hover {
+            background-color: #1e1e1e;
+        }
+
+        /* Blog Posts Section */
+        .blog-posts {
+            flex: 3;
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        article {
+            background: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        article h3 {
+            margin: 10px 0;
+        }
+
+        article p {
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar Styles */
+        aside {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h2 {
+            margin-top: 0;
+        }
+
+        aside input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #22c55e;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            .featured-post {
+                margin-right: 0;
+            }
+
+            aside {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Aspire KE</div>
+        <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-post">
+            <img src="AWAKEART __2022.jpg" alt="Featured Post" loading="lazy">
+            <h2>Featured Blog Post Title</h2>
+            <p>This is a short description of the featured blog post. It provides a brief overview of the content.</p>
+            <a href="https://www.myskillsfuture.gov.sg/content/student/en/secondary/education-guide/courses/article-listing/choosing-the-right-course.html" class="read-more">Read More</a>
+        </section>
+
+        <section class="blog-posts">
+            <h2>Latest Blog Posts</h2>
+            <div class="post-grid">
+                <article>
+                    <img src="tips.jpg" alt="Post Thumbnail" loading="lazy">
+                    <h3>Tips for Choosing the Right Course</h3>
+                    <p>Discover how to select a course that aligns with your passion and career goals...</p>
+                    <a href="https://www.myskillsfuture.gov.sg/content/student/en/secondary/education-guide/courses/article-listing/choosing-the-right-course.html" class="read-more">Read More</a>
+                </article>
+                <article>
+                    <img src="understanding.jpg" alt="Post Thumbnail" loading="lazy">
+                    <h3>Understanding KUCCPS Applications</h3>
+                    <p>Learn the ins and outs of the KUCCPS application process...</p>
+                    <a href="kuccps_tips.html" class="read-more">Read More</a>
+                </article>
+                <article>
+                    <img src="guidance.jpg" alt="Post Thumbnail" loading="lazy">
+                    <h3>KMTC Guidance for Students</h3>
+                    <p>Get essential tips for navigating the KMTC admission process...</p>
+                    <a href="kmtc_guide.html" class="read-more">Read More</a>
+                </article>
+                <article>
+                    <img src="guidancve2.jpg" alt="Post Thumbnail" loading="lazy">
+                    <h3>Course Selection Tips</h3>
+                    <p>Find out how to choose the best course for your future...</p>
+                    <a href="https://www.gooduniversitiesguide.com.au/study-information/study-options/choosing-a-course" class="read-more">Read More</a>
+                </article>
+                <article>
+                    <img src="helb icon.png" alt="Post Thumbnail" loading="lazy">
+                    <h3>HELB Guidance</h3>
+                    <p>Understand the HELB process and how to apply for loans...</p>
+                    <a href="helb_guide.html" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <aside>
+            <h2>Aspire KE Blog</h2>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="kuccps_tips.html">KUCCPS Applications</a></li>
+                <li><a href="kmtc_guide.html">KMTC Guidance</a></li>
+                <li><a href="https://www.gooduniversitiesguide.com.au/study-information/study-options/choosing-a-course">Course Selection Tips</a></li>
+                <li><a href="helb_guide.html">HELB Guidance</a></li>
+            </ul>
+            <h2>Recent Posts</h2>
+            <ul>
+                <li><a href="https://www.myskillsfuture.gov.sg/content/student/en/secondary/education-guide/courses/article-listing/choosing-the-right-course.html">Tips for Choosing the Right Course</a></li>
+                <li><a href="https://statics.kuccps.net/uploads/globalFiles/Students_Guide.pdf">Understanding KUCCPS Applications</a></li>
+                <li><a href="https://kmtc.ac.ke/downloads/">KMTC Guidance for Students</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Contact us:edwinmutunga123@gmail.com</p>
+        <p>Follow us on:
+            
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </p>
+        <p>&copy; 2025 Aspire KE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+
+            toggleButton.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
